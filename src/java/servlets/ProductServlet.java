@@ -71,7 +71,6 @@ public class ProductServlet extends HttpServlet {
                 product.setRazmer(Integer.parseInt(razmer));
                 JsonObjectBuilder job = Json.createObjectBuilder();
                 Cover cover = coverFacade.find(Long.parseLong(coverId));
-                
                 product.setCover(cover);
                 try {
                     productFacade.create(product);
